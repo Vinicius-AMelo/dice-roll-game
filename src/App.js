@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import Confetti from "react-confetti"
 import Dice from './components/dice'
 
 export default function App() {
@@ -72,12 +73,14 @@ if(allHeld && allSameNbmr){
 // END GAME
   return (
     <div className="main--app">
+      {tenzie && <Confetti />}
       <div className="main--dice">
         <div className="tenzie">
           <h1>Tenzies</h1>
           <p>Role os dados até que todos fiquem iguais. Clique em cada dado para congelá-lo no número atual</p>
           {dices}
-          {!tenzie ? <button onClick={rollDices}>Roll!</button> :<button onClick={reset}>Reset Game !</button>}
+          {tenzie ? <button onClick={reset}>Reset Game !</button> : <button onClick={rollDices}>Roll!</button>
+          }
         </div>
       </div>
     </div>
