@@ -75,7 +75,7 @@ if(allHeld && allSameNbmr){
       <div className="main--dice">
         <div className="tenzie">
           <h1>Tenzies</h1>
-          <p>Roll until all dice are the same. Click each die to freeze it at its current value between rolls.</p>
+          <p>Role os dados até que todos fiquem iguais. Clique em cada dado para congelá-lo no número atual</p>
           {dices}
           {!tenzie ? <button onClick={rollDices}>Roll!</button> :<button onClick={reset}>Reset Game !</button>}
         </div>
