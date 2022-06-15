@@ -53,7 +53,7 @@ export default function App() {
 
   useEffect(() => {
     if(tenzie){
-      alert('Parabéns, você venceu')
+      alert('Parabéns, mandou bem')
     }
   }, [tenzie])
 
